@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add --no-cache mpd && mkdir -p /music /playlists /var/lib/mpd /run/mpd
+RUN apk add --no-cache mpd
 
 EXPOSE 6600 8000
 
