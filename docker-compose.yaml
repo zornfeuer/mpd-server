@@ -10,5 +10,5 @@ services:
       - ./music:/music
       - ./playlists:/playlists
       - ./:/var/lib/mpd
-      - ./mpd.conf:/etc/mpd.conf
+      - ./config/mpd.conf:/etc/mpd.conf
     restart: always
