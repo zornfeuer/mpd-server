@@ -9,6 +9,6 @@ services:
     volumes:
       - ./music:/music:ro
       - ./playlists:/playlists
-      - .//var/lib/mpd
+      - ./:/var/lib/mpd
       - ./mpd.conf:/etc/mpd.conf:ro
     restart: always
