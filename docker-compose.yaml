@@ -1,0 +1,15 @@
+version: '3'
+services:
+  mpd:
+    image: woahbase/alpine-mpd:latest
+    container_name: mpd
+    user: "${UID:-1000}:${GID:-1000}"
+    ports:
+      - "6600:6600"
+      - "8000:8000"
+    volumes:
+      - ./music:/music:ro
+      - ./playlists:/playlists
+      - ./data:/data
+      - ./config/mpd.conf:/etc/mpd.conf:ro
+    restart: unless-stopped
